@@ -1,22 +1,16 @@
-/* Screen width < 1024px */
-@media screen and (max-width: 1024px) {
-.img-container{
-    display: flex;
-    flex-direction: column;
-}
-}
+
 /* All elements */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-margin-top: 40px;
+    scroll-margin-top: 64px;
 }
 /* NAVBAR START */
 .nav{
     width: 100%;
-    height: 40px;
+    height: 64px;
     padding: 0 15px 0 15px;
     position: fixed;
     display: flex;
@@ -27,11 +21,15 @@
     border-bottom: black 1px solid;
 }
 h2{
+    font-size: 40px;
     font-weight: 450;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .nav-link{
     text-decoration: none;
+}
+.nav-link img{
+    height: 40px;
 }
 /* NAVBAR ENDS */
 /* main */
@@ -45,16 +43,14 @@ main{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    max-width: 1024px;
-    min-height: 95vh;
     margin: auto;
+    height: 100vh;
 }
 .hero{
     padding: 0;
-    margin-top: 60px;
     width: 100%;
+    margin-top: 74px;
     max-width: 400px;
-    max-height: 100vh;
     border-radius: 20px;
     object-fit: cover;
     box-shadow: black 1px 1.5px 2px;
@@ -211,4 +207,20 @@ footer{
     align-items: center;
     font-size: 12px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Screen width < 1024px */
+@media screen and (max-width: 1024px) {
+    .img-container{
+        display: flex;
+        flex-direction: column;
+    }
+    }
+@media screen and (max-height: 830px){
+    .hero{
+        object-position: 0 -80px;
+        margin-top: 70px;
+        height: 360px;
+        width: 100%;
+    }
 }
